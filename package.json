@@ -1,9 +1,9 @@
 {
-  "name": "new-app-lite-ts",
+  "name": "params-loader-ts-demo",
   "version": "1.0.0",
-  "description": "XpresserJs Typescript Lite App (No Views) Boilerplate ",
+  "description": "Params loader TypeScript Demo",
   "main": "app.ts",
-  "repository": "https://github.com/xpresserjs/new-app-lite-ts",
+  "repository": "https://github.com/xpresserjs/params-loader-ts-demo",
   "author": "xpresserjs",
   "license": "MIT",
   "private": false,
