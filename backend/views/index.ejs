@@ -1,0 +1,58 @@
+<%
+const {$route} = ctx.$route;
+%>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= ctx.config('name') %></title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: antiquewhite;
+            padding: 20px;
+        }
+
+        a {
+            color: lightskyblue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div style="font-size: 24px; margin-bottom: 20px">
+    <a href="<%= ctx.route('users') %>">Users</a> /
+    <a href="<%= ctx.route('posts') %>">Posts</a>
+</div>
+
+<% if(ctx.$route.name === "users") { %>
+    <div style="color: white">
+        <% for (const user of users) { %>
+            <div style="margin-bottom: 20px;">
+                <a href="<%= ctx.route('user', user.id) %>"><%= user.name %> (<%= user.email %>)</a>
+            </div>
+        <% } %>
+
+        <div style="margin-bottom: 20px;">
+            <a href="<%= ctx.route('user', 6) %>">UnExisting 6 (unknown@example.com)</a>
+        </div>
+    </div>
+<% } else if(ctx.$route.name === "posts") { %>
+    <div style="color: white">
+        <% for (const post of posts) { %>
+            <div style="margin-bottom: 20px;">
+                <a href="<%= ctx.route('post', post.id) %>"><%= post.title %></a>
+            </div>
+        <% } %>
+    </div>
+<% } %>
+
+</body>
+</html>
