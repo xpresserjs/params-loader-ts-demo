@@ -41,7 +41,7 @@ const {$route} = ctx.$route;
         <% } %>
 
         <div style="margin-bottom: 20px;">
-            <a href="<%= ctx.route('user', 6) %>">UnExisting 6 (unknown@example.com)</a>
+            <a href="<%= ctx.route('user', 6) %>">Missing User 6 (unknown@example.com)</a>
         </div>
     </div>
 <% } else if(ctx.$route.name === "posts") { %>
@@ -51,6 +51,10 @@ const {$route} = ctx.$route;
                 <a href="<%= ctx.route('post', post.id) %>"><%= post.title %></a>
             </div>
         <% } %>
+
+        <div style="margin-bottom: 20px;">
+            <a href="<%= ctx.route('post', 10) %>">Missing Post 10</a>
+        </div>
     </div>
 <% } %>
 

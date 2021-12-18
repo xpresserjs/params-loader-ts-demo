@@ -51,11 +51,12 @@ const AppController = <Controller.Object>{
         // PostId will be a number because of the `postId` param loader has converted it.
         // However, a type `number` should be added for type’s sake.
         const postId = http.loadedParam<number>("postId");
+        const post = getMockPosts().find(post => post.id === postId);
 
         return {
             loadedPostId: postId,
             defaultPostId: http.params.postId,
-            post: getMockPosts().find(post => post.id === postId)
+            post: post || null
         }
     }
 };
