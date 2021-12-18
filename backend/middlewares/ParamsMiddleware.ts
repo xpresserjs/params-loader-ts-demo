@@ -1,11 +1,11 @@
-import {GenerateParamsMiddleware} from "@xpresser/params-loader";
+import {ParamsMiddleware} from "@xpresser/params-loader";
 import {getMockUsers} from "../models/MockModel";
 
 
 /**
  * ParamsMiddleware
  */
-export = GenerateParamsMiddleware({
+export = ParamsMiddleware({
     userId: {
         // Since load gets `user`
         // It would be better to rename the param to user.
