@@ -16,6 +16,8 @@ export = {
         domain: 'localhost',
         // Server Port
         port: 3000,
+        // Base Url
+        baseUrl: '/',
     },
 
     /**
