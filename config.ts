@@ -13,7 +13,6 @@ export = {
      * By default, xpresser sets this for you.
      */
     server: {
-        domain: 'localhost',
         // Server Port
         port: 3000,
         // Base Url
