@@ -1,5 +1,5 @@
 // Import Xpresser
-import xpresser = require("xpresser");
+import {init} from "xpresser";
 
 /**
  * Boot Xpresser with your config
@@ -7,10 +7,10 @@ import xpresser = require("xpresser");
  * Get config from config.ts
  * See https://xpresserjs.com/configuration/
  */
-import config = require("./config");
+import config from "./config";
 
 // Initialize Xpresser
-const $ = xpresser.init(config, {exposeDollarSign: false})
+const $ = init(config, {exposeDollarSign: false})
 
 // Initialize Typescript
 $.initializeTypescript(__filename)
